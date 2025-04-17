@@ -1,10 +1,10 @@
-# 🧠 Intel Image Classification
+# Intel Image Classification
 
-This project is part of a computer vision lab where we classify landscape images using PyTorch.
+This project is part of a computer vision project where we classify landscape images.
 
 ## 📁 Dataset
 
-We use the [Intel Image Classification Dataset](https://www.kaggle.com/puneet6060/intel-image-classification) which includes images in the following categories:
+We use the Intel Image Classification Dataset which includes images in the following categories:
 
 - Buildings
 - Forest
@@ -33,35 +33,41 @@ pip install torch torchvision matplotlib seaborn
 
 Or use the pre-installed environment in [Google Colab](https://colab.research.google.com/).
 
-## 🚀 Project Features
+## Підготовка до виконання проекту
 
-- Dataset loading and exploration
-- Image preprocessing (resize, normalization)
-- Data augmentation (random flip, rotation, jitter)
-- Custom dataset class for unlabeled prediction data
-- Dataloaders for training, validation, testing
-- Class distribution visualization
-- Sample image previews with class names
+First of all looked at the all classes and number of images in each training class
+![Classes](images\classes.png)
 
-## 📊 Training Setup
+Than, as you can see in diagram the number of images in all classes quite simillar so we do not need to trim anything 
+![Classes diagram](images\classes_diagram.png)
 
-```python
-batch_size = 32
-image_size = (128, 128)
-augmentation = True
-```
+Also, let's look at the images form each class
+![Images from each class](images\images_from_classes.png)
 
-## 📈 Visualizations
+## Побудова базової моделі нейронної мережі
 
-- Histogram of class distribution using Seaborn
-- Preview of example images with labels
+![Incorrect classification after RestNet50](images\training_1.png)
+![Incorrect classification after RestNet50](images\chart_1.png)
+![Incorrect classification after RestNet50](images\c_m_1.png)
+![Incorrect classification after RestNet50](images\incorrect_classification_1.png)
+
+## Оптимізація гіперпараметрів моделі нейронної мережі
+
+![Incorrect classification after RestNet50](images\manual_tuning.png)
+![Incorrect classification after RestNet50](images\training_2.png)
+![Incorrect classification after RestNet50](images\chart_2.png)
+![Incorrect classification after RestNet50](images\c_m_2.png)
+![Incorrect classification after RestNet50](images\incorrect_classification_2.png)
+
+## Transfer learning
+
+![Incorrect classification after RestNet50](images\restnet_res.png)
+![Incorrect classification after RestNet50](images\c_m_3.png)
+
+![Incorrect classification after RestNet50](images\incorrect_classification_3.png)
+
 
 ## ✅ To Run
 
 Upload the dataset to Google Colab or extract locally, then run each notebook cell in order.
 
----
-
-### 🧑‍💻 Author
-
-**Your Name** - [yourgithub](https://github.com/yourgithub)
